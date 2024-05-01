@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, Tooltip, Legend, ArcElement } from 'chart.js';
+import { toast } from 'react-toastify';
 
 ChartJS.register({
   Tooltip,
@@ -35,6 +36,12 @@ export default function PieChart({ query, labelName, label, title }) {
   };
 
   useEffect(() => {
+    if (isError) {
+      toast.error(error?.data?.message);
+    }
+  }, [isError, error]);
+
+  useEffect(() => {
     setChartData({
       labels: data?.map((item) => item[labelName]),
       datasets: [
@@ -53,7 +60,7 @@ export default function PieChart({ query, labelName, label, title }) {
         },
       ],
     });
-  }, [data]);
+  }, [data, label, labelName]);
 
   if (isLoading) return <h1>Loading</h1>;
 
