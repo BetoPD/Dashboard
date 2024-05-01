@@ -15,6 +15,9 @@ export const patientsApi = createApi({
     getSintomaFatalidad: builder.query({
       query: () => `/sintomaFatalidad`,
     }),
+    getProfesionesMasAfectadas: builder.query({
+      query: () => `/profesionesMasAfectadas`,
+    }),
   }),
 });
 
@@ -22,4 +25,5 @@ export const {
   useGetSintomasPacienteQuery,
   useGetFallecidosPorMesQuery,
   useGetSintomaFatalidadQuery,
+  useGetProfesionesMasAfectadasQuery,
 } = patientsApi;

@@ -44,6 +44,7 @@ nav li:first-child {
 main.container {
   margin: 10px 10px;
   background-color: #aed5f1;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -98,4 +99,13 @@ main.container .item:nth-child(6) {
     justify-content: center;
     align-items: center;
   }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  background-color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
