@@ -25,3 +25,12 @@ npm start
 ```bash
 npm run build
 ```
+
+## Requirements
+
+- Node.js
+- git
+
+## About the project
+
+This project is a dashboard made with React, Redux, and Material-UI. It is a simple project that shows a list of users and their details. The project is responsive and has a dark mode.
