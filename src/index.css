@@ -59,6 +59,9 @@ main.container {
 main.container .item {
   background-color: #f6f7f9;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main.container .item:nth-child(1) {

@@ -9,7 +9,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { toast } from 'react-toastify';
+import { CircularProgress } from '@mui/material';
+import toast from 'react-hot-toast';
 
 ChartJS.register({
   CategoryScale,
@@ -21,7 +22,7 @@ ChartJS.register({
 });
 
 export default function BarChart({ query, labelName, label, title }) {
-  const { data, isLoading, isError, error } = query();
+  const { data, isLoading, error, isError } = query();
 
   const [chartData, setChartData] = useState({
     labels: [],
@@ -74,7 +75,7 @@ export default function BarChart({ query, labelName, label, title }) {
     });
   }, [data, label, labelName]);
 
-  if (isLoading) return <h1>Loading</h1>;
+  if (isLoading) return <CircularProgress />;
 
   return <Bar data={chartData} options={options} />;
 }

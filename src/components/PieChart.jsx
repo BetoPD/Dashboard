@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, Tooltip, Legend, ArcElement } from 'chart.js';
-import { toast } from 'react-toastify';
+import { CircularProgress } from '@mui/material';
+import toast from 'react-hot-toast';
 
 ChartJS.register({
   Tooltip,
@@ -62,7 +63,7 @@ export default function PieChart({ query, labelName, label, title }) {
     });
   }, [data, label, labelName]);
 
-  if (isLoading) return <h1>Loading</h1>;
+  if (isLoading) return <CircularProgress />;
 
   return <Pie data={chartData} options={options} />;
 }
