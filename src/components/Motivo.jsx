@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function Motivo() {
   return (
-    <div>Motivo</div>
-  )
+    <>
+      <Helmet title="Motivo" />
+      <main>
+        <h1>Motivo</h1>
+      </main>
+    </>
+  );
 }

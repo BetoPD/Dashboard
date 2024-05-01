@@ -10,6 +10,8 @@ ChartJS.register({
   ArcElement,
 });
 
+ChartJS.responsive = true;
+
 export default function PieChart({ query, labelName, label, title }) {
   const { data, isLoading, isError, error } = query();
 
