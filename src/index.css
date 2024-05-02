@@ -109,3 +109,12 @@ footer {
   background-color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+main.NotFound {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://blob.udgtv.com/images/uploads/2017/12/el-pirata-de-culiac%C3%A1n-twitter-focus-0-0-696-464.jpg');
+  color: rgb(0, 0, 0);
+}

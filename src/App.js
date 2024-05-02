@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Nosotros from './components/Nosotros';
 import Motivo from './components/Motivo';
 import { Toaster } from 'react-hot-toast';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route index element={<Dashboard />} />
         <Route path="/motivo" element={<Motivo />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
