@@ -1,5 +1,5 @@
 import React from 'react';
-import Barchart from './Barchart';
+import BarChart from './BarChart';
 import {
   useGetSintomasPacienteQuery,
   useGetFallecidosPorMesQuery,
@@ -15,7 +15,7 @@ export default function Dashboard() {
       <Helmet title="Dashboard" />
       <main className="container">
         <div className="item">
-          <Barchart
+          <BarChart
             query={useGetSintomaFatalidadQuery}
             labelName={'nombre'}
             label={'Fatalidades'}
@@ -23,7 +23,7 @@ export default function Dashboard() {
           />
         </div>
         <div className="item">
-          <Barchart
+          <BarChart
             query={useGetFallecidosPorMesQuery}
             labelName={'MES'}
             label={'Fatalidades'}
