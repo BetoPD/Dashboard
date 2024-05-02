@@ -58,7 +58,7 @@ export default function BarChart({ query, labelName, label, title }) {
       labels: data?.map((item) => item[labelName]),
       datasets: [
         {
-          label: label,
+          label,
           data: data?.map((item) => item[label]),
           backgroundColor: [
             'rgba(75, 192, 192, 1)',
