@@ -65,7 +65,7 @@ export default function PieChart({ query, labelName, label, title }) {
     });
   }, [data, label, labelName]);
 
-  if (isLoading) return <CircularProgress />;
+  if (isLoading) return <CircularProgress color="inherit" />;
 
   return <Pie data={chartData} options={options} />;
 }

@@ -75,7 +75,7 @@ export default function BarChart({ query, labelName, label, title }) {
     });
   }, [data, label, labelName]);
 
-  if (isLoading) return <CircularProgress />;
+  if (isLoading) return <CircularProgress color="inherit" />;
 
   return <Bar data={chartData} options={options} />;
 }
