@@ -21,7 +21,7 @@ ChartJS.register({
   Legend,
 });
 
-export default function BarChart({ query, labelName, label, title }) {
+export default function Barchart({ query, labelName, label, title }) {
   const { data, isLoading, error, isError } = query();
 
   const [chartData, setChartData] = useState({
