@@ -1,0 +1,16 @@
+.motivo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 10px 10px;
+  background-color: #aed5f1;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.motivo p {
+  text-align: justify;
+}
+
+#Titulo {
+}

@@ -18,6 +18,21 @@ export const patientsApi = createApi({
     getProfesionesMasAfectadas: builder.query({
       query: () => `/profesionesMasAfectadas`,
     }),
+    getPersonasAtendidas: builder.query({
+      query: () => `/personasAtendidas`,
+    }),
+    getTasaMortalidad: builder.query({
+      query: () => `/tasaMortalidad`,
+    }),
+    getRetrasoRegistro: builder.query({
+      query: () => `/retrasoRegistro`,
+    }),
+    getAntecedentesMuertes: builder.query({
+      query: () => `/antecedentesMuertes`,
+    }),
+    getEvolucion: builder.query({
+      query: () => `/evolucion`,
+    }),
   }),
 });
 
@@ -26,4 +41,9 @@ export const {
   useGetFallecidosPorMesQuery,
   useGetSintomaFatalidadQuery,
   useGetProfesionesMasAfectadasQuery,
+  useGetPersonasAtendidasQuery,
+  useGetTasaMortalidadQuery,
+  useGetRetrasoRegistroQuery,
+  useGetAntecedentesMuertesQuery,
+  useGetEvolucionQuery,
 } = patientsApi;

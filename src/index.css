@@ -9,8 +9,8 @@ body {
 }
 
 nav {
-  background-color: white;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: #e8f0fe; /* Lighter blue */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -34,7 +34,7 @@ nav li {
 }
 
 .my-link:hover {
-  background-color: #f0f0f0;
+  background-color: #aed5f1;
 }
 
 nav li:first-child {
@@ -48,13 +48,14 @@ main.container {
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 20px;
   padding: 25px;
   grid-template-areas:
     'c1 c2 c3'
     'c4 c4 c5'
-    'c4 c4 c6';
+    'c4 c4 c6'
+    'c7 c8 c9';
 }
 
 main.container .item {
@@ -63,6 +64,17 @@ main.container .item {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+main.container .item p {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+main.container .item:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  transition: transform 0.2s ease-in-out;
 }
 
 main.container .item:nth-child(1) {
@@ -84,6 +96,18 @@ main.container .item:nth-child(5) {
 
 main.container .item:nth-child(6) {
   grid-area: c6;
+}
+
+main.container .item:nth-child(7) {
+  grid-area: c7;
+}
+
+main.container .item:nth-child(8) {
+  grid-area: c8;
+}
+
+main.container .item:nth-child(9) {
+  grid-area: c9;
 }
 
 @media (max-width: 925px) {
@@ -117,4 +141,7 @@ main.NotFound {
   align-items: center;
   background-image: url('https://blob.udgtv.com/images/uploads/2017/12/el-pirata-de-culiac%C3%A1n-twitter-focus-0-0-696-464.jpg');
   color: rgb(0, 0, 0);
+}
+
+.titulo {
 }

@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav>
       <ul>
         <li>
-          <Link className="my-link" to="">
+          <Link className="my-link" to="/">
             <HomeIcon fontSize="medium" />
           </Link>
         </li>
